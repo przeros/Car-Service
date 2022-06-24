@@ -1,0 +1,10 @@
+C:\Users\Przemek\Desktop\carService\carService\obj\Debug\carService.csproj.AssemblyReference.cache
+C:\Users\Przemek\Desktop\carService\carService\obj\Debug\carService.Properties.Resources.resources
+C:\Users\Przemek\Desktop\carService\carService\obj\Debug\carService.csproj.GenerateResource.cache
+C:\Users\Przemek\Desktop\carService\carService\obj\Debug\carService.csproj.CoreCompileInputs.cache
+C:\Users\Przemek\Desktop\carService\carService\bin\Debug\carService.exe.config
+C:\Users\Przemek\Desktop\carService\carService\bin\Debug\carService.exe
+C:\Users\Przemek\Desktop\carService\carService\bin\Debug\carService.pdb
+C:\Users\Przemek\Desktop\carService\carService\obj\Debug\carService.exe
+C:\Users\Przemek\Desktop\carService\carService\obj\Debug\carService.pdb
+C:\Users\Przemek\Desktop\carService\carService\obj\Debug\carService.Form1.resources
