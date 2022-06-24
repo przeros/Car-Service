@@ -27,7 +27,7 @@ namespace carService
         public void makeRepair(Repair newRepair)
         {
             repairs.Add(newRepair);
-            earnings += newRepair.countRepairCost();
+            earnings += newRepair.getTotalCost();
             Mechanic mechanic = newRepair.getMechanic();
             double mechanicReward = countMechanicRewardForRepair(newRepair);
             payTheMechanicForRepair(mechanic, mechanicReward);
@@ -44,7 +44,7 @@ namespace carService
             double provision2Percent = repair.getPartsCost() * 0.02;
             double work30Percent = repair.getNumberOfHours() * repair.getMechanic().getStakePerHour() * 0.3;
             double finalMechanicReward = provision2Percent + work30Percent;
-            return finalMechanicReward;
+            return finalMechanicReward;              
         }
 
         public string getName()

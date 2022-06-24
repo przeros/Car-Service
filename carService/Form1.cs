@@ -43,21 +43,41 @@ namespace carService
 
         }
 
-        private void addRepairButton_Click(object sender, EventArgs e)
+        private Mechanic fetchMechanicByNameAndSurname()
         {
-            string mechanicNameAndSurname = mechanicComboBox.Text;
-            int indexOfSpace = mechanicNameAndSurname.IndexOf(" ");
-            string mechanicName = mechanicNameAndSurname.Substring(0, indexOfSpace);
-            string mechanicSurname = mechanicNameAndSurname.Substring(indexOfSpace + 1, mechanicNameAndSurname.Length - indexOfSpace - 1);
-            Mechanic repairMechanic = new Mechanic();
-            foreach (Mechanic mechanic in carService.getMechanics())
+            Mechanic repairMechanic = null;
+
+            try
             {
-                if (mechanic.getName() == mechanicName && mechanic.getSurname() == mechanicSurname)
+                string mechanicNameAndSurname = mechanicComboBox.Text;
+                int indexOfSpace = mechanicNameAndSurname.IndexOf(" ");
+                string mechanicName = mechanicNameAndSurname.Substring(0, indexOfSpace);
+                string mechanicSurname = mechanicNameAndSurname.Substring(indexOfSpace + 1, mechanicNameAndSurname.Length - indexOfSpace - 1);
+                foreach (Mechanic mechanic in carService.getMechanics())
                 {
-                    repairMechanic = mechanic;
+                    if (mechanic.getName() == mechanicName && mechanic.getSurname() == mechanicSurname)
+                    {
+                        repairMechanic = mechanic;
+                    }
                 }
             }
+            catch(ArgumentOutOfRangeException e)
+            {
+                
+            }
 
+            return repairMechanic;
+        }
+
+        private void addRepairButton_Click(object sender, EventArgs e)
+        {
+            Mechanic repairMechanic = fetchMechanicByNameAndSurname();
+
+            if (registrationNumberText.Text.Equals("") || partsCostText.Text.Equals("") || numberOfHoursText.Text.Equals("") || repairMechanic == null)
+            {
+                MessageBox.Show("Wypełnij puste pola w formularzu!");
+                return;
+            }
 
             Repair repair = new Repair(registrationNumberText.Text, dateTimePicker1.Value, repairMechanic, Convert.ToDouble(partsCostText.Text), Convert.ToInt32(numberOfHoursText.Text));
             carService.makeRepair(repair);

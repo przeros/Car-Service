@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace carService
 {
@@ -36,10 +37,10 @@ namespace carService
             incrementRepairCounter();
         }
 
-        public double countRepairCost()
+        private double countRepairCost()
         {
             double repairCost = partsCost + (numberOfHours * mechanic.getStakePerHour());
-            return repairCost;
+            return repairCost;         
         }
 
         private void incrementRepairCounter()
