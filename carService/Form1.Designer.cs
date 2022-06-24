@@ -40,7 +40,6 @@ namespace carService
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.mechanicComboBox = new System.Windows.Forms.ComboBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.addRepairButton = new System.Windows.Forms.Button();
             this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Numer_Rejestracyjny = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Data_Oddania_Samochodu = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -48,6 +47,7 @@ namespace carService
             this.Koszt_Czesci_Zamiennych = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Czas_Pracy = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Całkowity_Koszt = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.addRepairButton = new System.Windows.Forms.Button();
             this.CarServiceGridView = new System.Windows.Forms.DataGridView();
             this.Nazwa_Warsztatu = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Zarobki = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -55,6 +55,7 @@ namespace carService
             this.Imie_Mechanika = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Nazwisko_Mechanika = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Pieniadze = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.CarServiceGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.MechanicGridView)).BeginInit();
@@ -165,16 +166,6 @@ namespace carService
             this.dataGridView1.Size = new System.Drawing.Size(744, 150);
             this.dataGridView1.TabIndex = 13;
             // 
-            // addRepairButton
-            // 
-            this.addRepairButton.Location = new System.Drawing.Point(25, 309);
-            this.addRepairButton.Name = "addRepairButton";
-            this.addRepairButton.Size = new System.Drawing.Size(200, 42);
-            this.addRepairButton.TabIndex = 14;
-            this.addRepairButton.Text = "Dodaj naprawę";
-            this.addRepairButton.UseVisualStyleBackColor = true;
-            this.addRepairButton.Click += new System.EventHandler(this.addRepairButton_Click);
-            // 
             // ID
             // 
             this.ID.HeaderText = "ID";
@@ -209,6 +200,16 @@ namespace carService
             // 
             this.Całkowity_Koszt.HeaderText = "Całkowity Koszt";
             this.Całkowity_Koszt.Name = "Całkowity_Koszt";
+            // 
+            // addRepairButton
+            // 
+            this.addRepairButton.Location = new System.Drawing.Point(25, 309);
+            this.addRepairButton.Name = "addRepairButton";
+            this.addRepairButton.Size = new System.Drawing.Size(200, 42);
+            this.addRepairButton.TabIndex = 14;
+            this.addRepairButton.Text = "Dodaj naprawę";
+            this.addRepairButton.UseVisualStyleBackColor = true;
+            this.addRepairButton.Click += new System.EventHandler(this.addRepairButton_Click);
             // 
             // CarServiceGridView
             // 
@@ -258,11 +259,22 @@ namespace carService
             this.Pieniadze.HeaderText = "Pieniądze";
             this.Pieniadze.Name = "Pieniadze";
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(404, 349);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 17;
+            this.button1.Text = "button1";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click_1);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1137, 470);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.MechanicGridView);
             this.Controls.Add(this.CarServiceGridView);
             this.Controls.Add(this.addRepairButton);
@@ -315,6 +327,7 @@ namespace carService
         private System.Windows.Forms.DataGridViewTextBoxColumn Imie_Mechanika;
         private System.Windows.Forms.DataGridViewTextBoxColumn Nazwisko_Mechanika;
         private System.Windows.Forms.DataGridViewTextBoxColumn Pieniadze;
+        private System.Windows.Forms.Button button1;
     }
 }
 

@@ -96,5 +96,15 @@ namespace carService
             }
 
         }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            /*List<Repair> mostExpensiveRepairs3 = carService.getRepairs().FindAll(repair => repair.getCarTakeDate().Year.Equals(2022)).FindAll(repair => repair.getCarTakeDate().Month.Equals(2))
+                .OrderBy(repair => repair.getTotalCost()).Take(1).ToList();*/
+            List<Repair> mostExpensiveRepairs = carService.getRepairs().FindAll(repair => repair.getRegistrationNumber().Substring(0, 3).Equals("AAA")).ToList();
+            double procent = mostExpensiveRepairs.Count * 100 / carService.getRepairs().Count;
+            Form2 form2 = new Form2(mostExpensiveRepairs, procent);
+            form2.ShowDialog();
+        }
     }
 }
